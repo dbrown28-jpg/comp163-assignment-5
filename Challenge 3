@@ -1,0 +1,16 @@
+print("")
+# Print the header row
+print("=== Challenge 3: Multiplication Table ===")
+print("Multiplication Table:")
+print("    ", end="")  # Empty corner cell
+for col in range(1, 11):
+    print(f"{col:4}", end="")  # Print column headers
+print()  # Newline after header
+
+# Print the table rows
+for row in range(1, 11):
+    print(f"{row:2} ", end="")  # Print row label
+    for col in range(1, 11):
+        product = row * col
+        print(f"{product:4}", end="")  # Print product with spacing
+    print()  # Newline at the end of each row
