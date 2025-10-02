@@ -1,0 +1,23 @@
+#"Challenge 2: Prime checker - for loop for known range"
+print("")
+
+print("=== Challenge 2: Prime Number Checker ===")
+# Get input from the user
+n = int(input("Enter a number: "))
+
+# Ensure the number is greater than 1
+if n <= 1:
+    print("Please enter a number greater than 1.")
+else:
+    print(f"Testing divisors from 2 to {n-1}...")
+
+    is_prime = True  # Assume the number is prime unless a divisor is found
+
+    for i in range(2, n):
+        if n % i == 0:
+            print(f"{n} is not prime (divisible by {i})")
+            is_prime = False
+            break
+
+    if is_prime:
+        print(f"{n} is prime!")
